@@ -51,5 +51,6 @@
 - [x] Stage 2: MATLAB 3-band FIR design (`design_eq_filters.m`) & auto-generated `eq_coeffs_pkg.vhd`
 - [x] Stage 3: Parameterized Systolic Array FIR (`mac_cell.vhd`, `fir_filter.vhd`), verified with `nvc`
 - [x] Stage 4: 3-band equalizer core (`audio_equalizer.vhd`: 3× FIR, mixing, scaling, saturation) & simulation
-- [ ] Stage 5: Single-domain 125 MHz peripherals (`timing_gen`, `btn_controller`, SPI ADC/DAC controllers)
-- [ ] Stage 6: Top-level integration (`top_audio_eq.vhd`), PYNQ-Z2 `.xdc`, Vivado build & hardware verification
+- [x] Stage 5: Single-domain 125 MHz peripherals (`timing_gen.vhd`, `btn_controller.vhd`, `adc_controller.vhd`, `dac_controller.vhd`)
+- [x] Stage 6: RTL/constraints integration (`top_audio_eq.vhd`, `fpga/constraints/pynq_z2.xdc`)
+- [ ] Vivado synthesis/implementation, resource/timing reporting, and live hardware verification on the PYNQ-Z2
