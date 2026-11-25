@@ -29,6 +29,7 @@
   - `COEF_WIDTH = 13` (signed U2)
   - `PROD_WIDTH = 25` (`12 + 13`)
   - `SUM_WIDTH = 33` (`25 + ceil(log2(141)) = 25 + 8` guard bits, zero overflow)
+  - `MIX_WIDTH = 35` (`33`-bit band sum + 2 guard bits for 3-band mixing)
 - **FIR Architecture:** Modular, parameterized **Systolic Array** (`mac_cell.vhd` with `z^-2` data pipeline and `z^-1` sum pipeline + `fir_filter.vhd` instantiated via `for ... generate` with generic `COEFFS` from `eq_coeffs_pkg.vhd`).
 - **Planned Board Controls (PYNQ-Z2):**
   - `SW0`: Audio master ON/OFF (muted to mid-scale `0x800` when OFF)
@@ -49,6 +50,6 @@
 - [x] Stage 1: Architecture, hardware UI spec, repo layout & `.gitignore`
 - [x] Stage 2: MATLAB 3-band FIR design (`design_eq_filters.m`) & auto-generated `eq_coeffs_pkg.vhd`
 - [x] Stage 3: Parameterized Systolic Array FIR (`mac_cell.vhd`, `fir_filter.vhd`), verified with `nvc`
-- [ ] Stage 4: 3-band equalizer core (`audio_equalizer.vhd`: 3× FIR, mixing, scaling, saturation) & simulation
+- [x] Stage 4: 3-band equalizer core (`audio_equalizer.vhd`: 3× FIR, mixing, scaling, saturation) & simulation
 - [ ] Stage 5: Single-domain 125 MHz peripherals (`timing_gen`, `btn_controller`, SPI ADC/DAC controllers)
 - [ ] Stage 6: Top-level integration (`top_audio_eq.vhd`), PYNQ-Z2 `.xdc`, Vivado build & hardware verification
