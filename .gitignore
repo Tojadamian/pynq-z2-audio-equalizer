@@ -1,0 +1,36 @@
+# === Vivado build artifacts & project files ===
+*.jou
+*.log
+*.str
+*.dmp
+*.pb
+*.wdb
+*.xpr
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+.Xil/
+vivado_pid*.debug
+
+# === Bitstreams (opcjonalnie usuń tę linię, jeśli chcesz wrzucać gotowy .bit) ===
+*.bit
+*.bin
+
+# === NVC / GHDL simulation artifacts ===
+work/
+*.vcd
+*.fst
+*.cf
+
+# === MATLAB temporary files ===
+*.asv
+*.m~
+*.autosave
+
+# === macOS & VS Code ===
+.DS_Store
+.vscode/
