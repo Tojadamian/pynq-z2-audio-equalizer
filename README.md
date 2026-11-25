@@ -134,6 +134,6 @@ This testbench exercises the LPF, BPF, and HPF paths with passband and stopband 
 - [x] Generated coefficient package with LPF, BPF, and HPF coefficient arrays.
 - [x] Parameterized systolic FIR RTL (`mac_cell` and `fir_filter`); project notes record NVC verification.
 - [x] Three-band equalizer core (`audio_equalizer.vhd`) and simulation testbench (`tb_audio_equalizer.vhd`), verified with NVC.
-- [ ] Single-clock timing and peripheral controllers: sample-rate enable, button debounce, SPI ADC, and SPI DAC.
+- [x] Single-clock timing and peripheral controllers: sample-rate enable, button debounce, SPI ADC, and SPI DAC.
 - [ ] Top-level board integration, PYNQ-Z2 constraints, and Vivado build.
 - [ ] Full-system simulation and hardware verification after board-level integration.
